@@ -1,0 +1,254 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+
+}
+
+.fondo{
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+}
+
+.header .Logo{
+    padding: 20px;
+}
+
+.header .Logo img{
+    width: 300px;
+
+}
+
+.header .buttons{
+    padding: 20px;
+    margin-right: 40px;
+    
+}
+
+.header .buttons .boton{
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+.header .buttons .boton button{
+    padding: 15px;
+    width: 120px;
+    border-radius: 7px;
+    border-style: none;
+    background-color: #007dbc;
+    color: #ffffff;
+
+}
+
+.menu{
+    padding-left: 15px;
+    color: black;
+    display: flex;
+    background-color: rgb(223, 158, 61);
+    margin-top: 10px;
+}
+
+.menu ul li{
+    margin-left: 25px;
+}
+
+.menu ul li a{
+    color: black;
+    size: 25px;
+}
+
+
+
+.Form{
+    display: flex;
+    max-width: 1200px;
+    width: 85%;
+    margin: auto;
+    flex-direction: column;
+    height: 49vh;
+}
+
+.Form h1{
+    margin-top: 55px;
+    text-align: center;
+}
+
+.Form form{
+    width: 50%;
+    margin: 35px auto;
+    
+    
+}
+
+.for{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Form form .item{
+    display: flex;
+    flex-direction: column;
+}
+
+.Form form select{
+    display: flex;
+    flex-direction: column;
+}
+
+.Form form .item input{
+    height: 30px;
+    width: 250px;
+    margin-bottom: 15px;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.Form form .item select{
+    height: 30px;
+    margin-bottom: 15px;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.Form form .item button{
+    height: 35px;
+    margin-bottom: 15px;
+    border: solid 1px black;
+    border-radius: 5px;
+    background-color: rgb(223, 158, 61);
+    color: white;
+}
+
+.Form form .item button a{
+    text-decoration: none;
+    color: white;
+}
+
+.spinner-border {
+    margin-left: 8px;
+}
+
+
+
+
+/*-------------------------*/
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.7;
+  }
+  
+  #loader::after {
+    content: "";
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+/*---------------------------------------------*/
+.data{
+    max-width: 1000px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.data .head{
+    margin-top: 75px;
+}
+
+.data .head2{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.data .text{
+    border: solid 1px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.data .text div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.imag{
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  h1 {
+    font-family: Arial, sans-serif;
+    font-size: 48px;
+    color: #f0f0f0;
+  }
+  
+  .confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #FFD700; /* Golden color for confetti */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    pointer-events: none;
+    animation: confetti-fall 3s linear infinite;
+  }
+  
+  @keyframes confetti-fall {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100vh);
+    }
+  }

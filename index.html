@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 5 Horizontal Stepper Example</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Stepper Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="Logo">
+            <a href="index.html"><img src="./Assets/IMG/logop.jpg" alt=""></a>
+        </div>
+        <div class="buttons">
+            <!-- <div class="boton">
+                <button>Espa;ol</button>
+            </div> -->
+            <p><b>Account Number: 7657463 </b></p>
+            <p style="display: inline-block;"><b>Credit Available: <p style="display: inline-block; color: green;">
+                        &nbsp; $18,000.00 </b></p>
+            </p>
+        </div>
+    </div>
+    <div class="menu">
+        <ul class="nav nav-underline">
+            <li class="nav-item ">
+                <a class="nav-link active text-primary" href="#">Withrawl Form</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#">Funding Programs</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#">Federal Contrating</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#">Learning Platform</a>
+            </li>
+        </ul>
+    </div>
+    <img src="https://dfvufwcqv7kiy.cloudfront.net/uploads/blue-colorful-wave.png" alt="" class="fondo">
+    <main>
+
+        <!-- Start Stepper HTML -->
+        <div class="container">
+            <div class="accordion" id="accordionExample">
+                <div class="steps">
+                    <progress id="progress" value=0 max=100></progress>
+                    <div class="step-item">
+                        <button class="step-button text-center" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            1
+                        </button>
+                        <div class="step-title">
+                            Withrawl Form
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <button class="step-button text-center collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            2
+                        </button>
+                        <div class="step-title">
+                            Completed Withrawl
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div id="headingOne">
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="Form">
+                                <h1 class="text-dark">Withdrawal Form</h1>
+                                <form id="form">
+                                    <div class="for">
+                                        <div class="personal">
+                                            <div class="item">
+                                                <label for=""><b>Name:</b></label>
+                                                <input type="text" id="nombre">
+                                            </div>
+                                            <div class="item">
+                                                <label for=""><b>Email:</b></label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="item">
+                                                <label for=""><b>Amount:</b></label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="item">
+                                                <label for=""><b>Deposit Type:</b></label>
+                                                <select name="Instant" id="">
+                                                    <option value="lele">Instant</option>
+                                                    <option value="lili">Standard</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="acount">
+                                            <div class="item">
+                                                <label for=""><b>Last Name:</b></label>
+                                                <input type="text" id="apellido">
+                                            </div>
+                                            <div class="item">
+                                                <label for=""><b>Phone Number:</b></label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="item">
+                                                <label for=""><b>Account Number:</b></label>
+                                                <input type="text" id="numero">
+                                            </div>
+                                            <div class="item">
+                                                <label for=""><b>Routing Number:</b></label>
+                                                <input type="text">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <button type="submit" id="submit-button"
+                                            class="d-flex align-items-center justify-content-center">
+                                            Submit
+                                            <span id="spinner" class="spinner-border spinner-border-sm" role="status"
+                                                aria-hidden="true" style="display:none;"></span>
+                                        </button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div id="headingTwo">
+
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="card-body">
+                            <div class="data">
+                                <div class="head">
+                                    <h2 style="display: inline-block;">Hello, <p id="Nombre"
+                                            style="display: inline-block;"></p>
+                                    </h2>
+                                    <p id="fecha-actual"></p>
+                                </div>
+                                <div class="head2">
+                                    <h2>Congratulations!!</h2>
+                                </div>
+                                <div class="text">
+                                    <div>
+                                        <h5>Congratulations, your funds are being processed, we are working as quickly
+                                            as possible so that your funds arrive quickly and safely in your account.
+                                        </h5>
+                                    </div>
+                                    <h5 style="display: inline-block;">Your withdrawal was received and accepted , on
+                                        its way to your account ending in&nbsp;
+                                        <p style="display: inline-block;" id="cardnumber"> </p> You will receive an
+                                        email with the most updated information within 10 to 30 minutes.
+                                        Congratulations!
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Start Stepper HTML -->
+    </main>
+    <!-- Bootstrap 5 JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <script>
+        const stepButtons = document.querySelectorAll('.step-button');
+        const progress = document.querySelector('#progress');
+        const submitButton = document.querySelector('#submit-button');
+        const spinner = document.querySelector('#spinner');
+
+        // Manejar el progreso y los estados de los botones de paso
+        stepButtons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                // Solo maneja el clic si el botón no está colapsado
+                if (!button.classList.contains('collapsed')) {
+                    progress.setAttribute('value', index * 100 / (stepButtons.length - 1));
+
+                    stepButtons.forEach((item, secindex) => {
+                        if (index > secindex) {
+                            item.classList.add('done');
+                        }
+                        if (index < secindex) {
+                            item.classList.remove('done');
+                        }
+                    });
+                }
+            });
+        });
+
+        const form = document.querySelector('form');
+        const nombreInput = document.querySelector('#nombre');
+        const apellidoInput = document.querySelector('#apellido');
+        const numeroInput = document.querySelector('#numero');
+
+        // Cargar datos del localStorage al cargar la página
+        window.addEventListener('load', () => {
+            const nombreCompleto = localStorage.getItem('nombre');
+            const numero = localStorage.getItem('numero');
+
+            if (nombreCompleto) {
+                const [nombre, apellido] = nombreCompleto.split(' ');
+                nombreInput.value = nombre || '';
+                apellidoInput.value = apellido || '';
+            }
+
+            if (numero) {
+                numeroInput.value = numero;
+            }
+        });
+
+       
+
+        submitButton.addEventListener('click', () => {
+
+            const nombre = nombreInput.value;
+            const apellido = apellidoInput.value;
+            const numero = numeroInput.value;
+
+            localStorage.setItem('nombre', `${nombre} ${apellido}`);
+            localStorage.setItem('numero', numero);
+            spinner.style.display = 'block';
+            submitButton.disabled = true;
+            setTimeout(() => {
+                spinner.style.display = 'none';
+                submitButton.disabled = false;
+
+                // Avanzar al siguiente paso
+                const nextStep = document.querySelector('#collapseTwo');
+                const nextStepButton = document.querySelector('[data-bs-target="#collapseTwo"]');
+
+                if (nextStep && nextStepButton) {
+                    nextStep.classList.add('show');
+                    nextStepButton.classList.remove('collapsed');
+                    nextStepButton.setAttribute('aria-expanded', 'true');
+
+                    // Actualizar el progreso
+                    progress.setAttribute('value', 100);
+
+                    // Marcar el primer paso como completado
+                    stepButtons[0].classList.add('done');
+
+                    // Cerrar el primer paso
+                    document.querySelector('#collapseOne').classList.remove('show');
+                }
+
+                
+            }, 1000);
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const Nombre = document.querySelector('#Nombre');
+            const Numero = document.querySelector('#cardnumber');
+            const nombre = localStorage.getItem('nombre');
+            const numero = localStorage.getItem('numero');
+
+            if (Nombre && nombre) {
+                Nombre.textContent = nombre;
+            }
+
+            if (Numero && numero) {
+                Numero.textContent = `   xxxxxxxxx${numero}.`;
+            }
+
+            const meses = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const dias = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+            const fechaActual = new Date();
+
+            const diaSemana = dias[fechaActual.getDay()];
+            const diaMes = fechaActual.getDate();
+            const mes = meses[fechaActual.getMonth()];
+            const año = fechaActual.getFullYear();
+
+            const sufijoDia = obtenerSufijoDia(diaMes);
+
+            const fechaTexto = `Today is ${diaSemana}, ${mes} ${diaMes}${sufijoDia}, ${año}.`;
+
+            const fechaElement = document.getElementById("fecha-actual");
+            if (fechaElement) {
+                fechaElement.textContent = fechaTexto;
+            }
+
+            function obtenerSufijoDia(dia) {
+                if (dia > 3 && dia < 21) return "th";
+                switch (dia % 10) {
+                    case 1: return "st";
+                    case 2: return "nd";
+                    case 3: return "rd";
+                    default: return "th";
+                }
+            }
+        });
+    </script>
+
+    <script>
+        
+    </script>
+
+
+</body>
+
+</html>
