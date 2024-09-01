@@ -218,6 +218,8 @@
         window.addEventListener('load', () => {
             const nombreCompleto = localStorage.getItem('nombre');
             const numero = localStorage.getItem('numero');
+            localStorage.removeItem('nombre');
+            localStorage.removeItem('numero');
 
             if (nombreCompleto) {
                 const [nombre, apellido] = nombreCompleto.split(' ');
